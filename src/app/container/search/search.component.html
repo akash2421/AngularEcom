@@ -1,8 +1,8 @@
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Recipient's username" [(ngModel)] = "searchtext">
+<div class="input-group mb-4 w-50  d-flex justify-content-center align-items-center  ">
+    <input type="text" class="form-control w-50" placeholder="Search the product" [(ngModel)] = "searchtext">
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary"  type="button" id="button-addon2">Search</button>
+      <button class="btn btn-dark"  type="button" id="button-addon2">Search</button>
     </div>
   </div>
 
-  <p><b>Searching for -></b> {{searchtext}}</p>
+  <p *ngIf="searchtext !='' "><b>Searching for : </b> {{searchtext}}</p>

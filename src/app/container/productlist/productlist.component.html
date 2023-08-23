@@ -1,17 +1,17 @@
 <section style="background-color: #eee;">
     <div class="container py-5">
       <div class="row">
-        <div class="col-md-12 col-lg-4 mb-lg-4 mb-lg-0" *ngFor="let item of products;let i = index" >
+        <div class="col-md-12 col-lg-4 mb-lg-4 mb-lg-0" *ngFor="let item of products" >
           <div class="card mb-2">
             <div class="d-flex justify-content-between p-3">
               <p class="lead mb-0">{{item.brand}}</p>
-              <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
-                style="width: 35px; height: 35px;">
-                <p class="text-white mb-0 small">{{i}}</p>
+              <div class="bg-info  d-flex align-items-center justify-content-center "
+                style="width: 105px; height: 40px; margin-right: -20px;"  *ngIf="item.discountPrice ">
+                <p class="text-white fw-bold mt-3">{{(100- (item.discountPrice / item.price  * 100)).toFixed(0)}}% OFF</p>
               </div>
             </div>
             <img [src]="item.imageURL" class="card-img-top"
-              alt="Laptop" />
+              alt="Laptop" width="300" height="300" />
             <div class="card-body">
               <div class="d-flex justify-content-between">
                 <p class="small"><a href="#!" class="text-muted">{{item.category}}</a></p>
