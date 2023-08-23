@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  menulist:string[] = ["Home","Product","Sales","Category","About"]
 }

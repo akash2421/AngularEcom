@@ -6,28 +6,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto">
-        <li class="nav-item mx-2">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link active" aria-current="page" href="#">Products</a>
-        </li>
-        
-        <li class="nav-item mx-2 dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Category
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-        
-          </ul>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link active " aria-disabled="true">Contact</a>
+        <li class="nav-item mx-2" *ngFor=" let menu of menulist">
+          <a class="nav-link active" aria-current="page" href="#">{{menu}}</a>
         </li>
       </ul>
-     <app-hedaer-right></app-hedaer-right>
+      <app-header-right></app-header-right>
+
     </div>
   </div>
 </nav>

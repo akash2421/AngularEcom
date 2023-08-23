@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
-import { HedaerRightComponent } from './header/hedaer-right/hedaer-right.component';
-import { ProductlistComponent } from './productlist/productlist.component';
-import { SearchComponent } from './productlist/search/search.component';
+import { containerComponent } from './container/container.component';
+import { SearchComponent } from './container/search/search.component';
+import { ProductlistComponent } from './container/productlist/productlist.component';
+import { HeaderRightComponent } from './header/header-right/header-right.component';
 
 
 @NgModule({
@@ -15,9 +16,10 @@ import { SearchComponent } from './productlist/search/search.component';
     AppComponent,
     HeaderComponent,
     TopHeaderComponent,
-    HedaerRightComponent,
-    ProductlistComponent,
+    containerComponent,
     SearchComponent,
+    ProductlistComponent,
+    HeaderRightComponent,
   ],
   imports: [
     FormsModule,
