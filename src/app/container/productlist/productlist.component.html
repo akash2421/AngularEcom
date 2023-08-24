@@ -4,8 +4,7 @@
 [outOfStock]="productoutstock"
 (checkedboxbtnChanged)="onFilterchanged($event)"
 ></app-filter>
-<div class="d-flex flex-wrap justify-content-start container mt-5">
-            <app-product   *ngFor="let pro of products" [product]="pro" 
-           ></app-product>
+<div class="d-flex flex-wrap justify-content-center container mt-5">
+            <app-product   *ngFor="let pro of products" [product]="pro" ></app-product>
 
 </div>
