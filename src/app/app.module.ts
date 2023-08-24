@@ -9,6 +9,8 @@ import { containerComponent } from './container/container.component';
 import { SearchComponent } from './container/search/search.component';
 import { ProductlistComponent } from './container/productlist/productlist.component';
 import { HeaderRightComponent } from './header/header-right/header-right.component';
+import { ProductComponent } from './container/productlist/product/product.component';
+import { FilterComponent } from './container/productlist/filter/filter.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { HeaderRightComponent } from './header/header-right/header-right.compone
     SearchComponent,
     ProductlistComponent,
     HeaderRightComponent,
+    ProductComponent,
+    FilterComponent,
   ],
   imports: [
     FormsModule,

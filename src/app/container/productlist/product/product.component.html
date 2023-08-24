@@ -1,0 +1,35 @@
+  <div class="card mx-3 ">
+      <div class="d-flex justify-content-between p-3">
+        <p class="lead mb-0">{{product.brand}}</p>
+        <div class="bg-info  d-flex align-products-center justify-content-center "
+          style="width: 105px; height: 35px; margin-right: -20px;"  *ngIf="product.discountPrice ">
+          <p class="text-white fw-bold mt-1 ">{{(100- (product.discountPrice / product.price  * 100)).toFixed(0)}}% OFF</p>
+        </div>
+      </div>
+      <img [src]="product.imageURL" class="card-img-top"
+        alt="Laptop" width="200" height="200" />
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <p class="small"><a href="#!" class="text-muted">{{product.category}}</a></p>
+          <p class="small ">{{product.gender}}</p>
+        </div>
+
+        <div class="d-flex justify-content-between mx-auto mb-4 ">
+          <h5 class="mb-0 ">{{product.name}}</h5>
+          <h5 class="text-dark mb-0">${{product.price}}</h5>
+        </div>
+
+        <div class="d-flex justify-content-between mb-2">
+          <p class="text-muted mb-0">Available: <span class="fw-bold">{{product.items_left}}</span></p>
+          <div class="ms-auto text-warning">
+            <p class="text-muted mb-0">color: {{product.color.length}}</p>
+
+          </div>
+          
+        </div>
+        <div class="ms-auto " [ngStyle]="{fontWeight:'bold',color : product.is_in_inventory ? 'Green' : 'Red'}">
+          <p class="text-muted mb-0">{{product.is_in_inventory ? "In Stock": "out of stock"}}</p>
+
+        </div>
+      </div>
+    </div>
