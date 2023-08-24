@@ -5,8 +5,7 @@
 (checkedboxbtnChanged)="onFilterchanged($event)"
 ></app-filter>
 <div class="d-flex flex-wrap justify-content-start container mt-5">
-      <div *ngFor="let pro of products">
-            <app-product  [product]="pro" *ngIf="selectedFilterRadioButton === 'all' || pro.is_in_inventory.toString() === selectedFilterRadioButton"></app-product>
+            <app-product   *ngFor="let pro of products" [product]="pro" 
+           ></app-product>
 
-      </div>
 </div>
