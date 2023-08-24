@@ -464,6 +464,11 @@ export class ProductlistComponent {
   productstock = this.products.filter(total=>total.is_in_inventory === true ).length
   productoutstock = this.products.filter(total=>total.is_in_inventory === false ).length
 
-  
+  selectedFilterRadioButton : string  = 'all' 
+
+  onFilterchanged(value:string){
+    console.log(value)
+    this.selectedFilterRadioButton = value
+  }
 
 }

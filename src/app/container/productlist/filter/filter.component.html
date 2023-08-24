@@ -1,15 +1,18 @@
 <div class="filter">
     <h5>Filter:</h5>
     <div class="form-check form-switch">
-        <input class="form-check-input" name="filter" type="checkbox" value="All"  >
+        <input class="form-check-input" name="filter" type="radio" value="all" [(ngModel)]="checkedboxbtn"
+            (change)="oncheckedboxbtnChanged()">
         <label class="form-check-label" for="flexSwitchCheckChecked">{{'All ('+all+')'}}</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" name="filter" type="checkbox" value="true"  >
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="filter" type="radio" value="true" [(ngModel)]="checkedboxbtn"
+            (change)="oncheckedboxbtnChanged()">
         <label class="form-check-label" for="flexSwitchCheckChecked">{{'InStock ('+inStock+')'}}</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" name="filter" type="checkbox" value="false"  >
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="filter" type="radio" value="false" [(ngModel)]="checkedboxbtn"
+            (change)="oncheckedboxbtnChanged()">
         <label class="form-check-label" for="flexSwitchCheckChecked">{{'Out Of Stock ('+outOfStock+')'}}</label>
-      </div>
+    </div>
 </div>

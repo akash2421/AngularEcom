@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input ,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -11,9 +11,18 @@ export class FilterComponent {
 
   @Input()
   inStock: number = 0
-  
+
   @Input()
   outOfStock: number = 0
 
 
+   @Output()
+  checkedboxbtnChanged : EventEmitter<string> =  new EventEmitter<string>();
+
+  checkedboxbtn: string  = 'all';
+
+  oncheckedboxbtnChanged(){
+    this.checkedboxbtnChanged.emit(this.checkedboxbtn)
+
+  }
 }
