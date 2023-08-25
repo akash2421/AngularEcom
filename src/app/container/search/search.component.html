@@ -1,7 +1,8 @@
 <div class="input-group mb-4 d-flex justify-content-center align-items-center">
-    <input type="text" class="form-control w-50" placeholder="Search the product" [(ngModel)] = "searchtext">
+    <input type="text" class="form-control w-50" placeholder="Search the product" #searchInput>
     <div class="input-group-append">
-      <button class="btn btn-dark" [disabled]="!searchtext"  type="button" id="button-addon2">Search</button>
+      <button class="btn btn-dark" (click)="updateInputChange()" 
+      type="button">Search</button>
     </div>
   </div>
 
