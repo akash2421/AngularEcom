@@ -12,6 +12,7 @@ import { HeaderRightComponent } from './header/header-right/header-right.compone
 import { ProductComponent } from './container/productlist/product/product.component';
 import { FilterComponent } from './container/productlist/filter/filter.component';
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
+import { SetBackground } from './CustomDirective/setBackground.directive';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ProductDetailComponent } from './container/product-detail/product-detai
     ProductComponent,
     FilterComponent,
     ProductDetailComponent,
+    SetBackground
   ],
   imports: [
     FormsModule,
