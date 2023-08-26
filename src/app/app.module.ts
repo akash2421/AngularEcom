@@ -13,6 +13,7 @@ import { ProductComponent } from './container/productlist/product/product.compon
 import { FilterComponent } from './container/productlist/filter/filter.component';
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 import { SetBackground } from './CustomDirective/setBackground.directive';
+import { BannerComponent } from './banner/banner.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SetBackground } from './CustomDirective/setBackground.directive';
     ProductComponent,
     FilterComponent,
     ProductDetailComponent,
-    SetBackground
+    SetBackground,
+    BannerComponent
   ],
   imports: [
     FormsModule,

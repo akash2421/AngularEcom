@@ -20,6 +20,8 @@
     "@angular/router": "^16.2.0",
     "@ng-bootstrap/ng-bootstrap": "^15.1.1",
     "@popperjs/core": "^2.11.6",
+    "@syncfusion/ej2-angular-navigations": "^22.2.8",
+    "@syncfusion/ej2-angular-popups": "^22.2.9",
     "bootstrap": "^5.2.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

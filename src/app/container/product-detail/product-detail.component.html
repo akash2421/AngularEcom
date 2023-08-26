@@ -1,6 +1,6 @@
-<div class="ekart--product--details--info scroll">
-    <div class="ekart-product-detail-close">
-        <i class="fa fa-times" aria-hidden="true"></i>
+<div class="ekart--product--details--info scroll"  *ngIf="ispopUpShow" appOutside (click)="ClickedOut($event)">
+    <div class="ekart-product-detail-close" (click)="closePop()">
+        <i class="fa fa-times" aria-hidden="true" ></i>
     </div>
     <div class="ekart-product-detail-image">
         <img [src]="product.imageURL" class="ekart-product-detail-image">
@@ -31,12 +31,12 @@
             </diV>                
         </div>
 
-        <div class="ekart-product-detail-color" setBackground>
+        <div class="ekart-product-detail-color" style=" background:#f8f8f8"  >
             <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
                 <h4>Available Color</h4>
             </div>
-            <diV style="margin-top: 20px;height: 40px;" setBackground>
-                <span class="ekart-product-detail-available-color" *ngFor="let colors of product.color" style="background-color: {{colors}}"></span>
+            <diV style="margin-top: 20px;height: 40px;" >
+                <span class="ekart-product-detail-available-color" *ngFor="let colors of product.color" [style.background-color]= "colors"></span>
                 
             </diV>                
         </div>
@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="ekart-product-detail-addtoCart">
-        <button class="btn-add-to-cart">ADD TO CART</button>
+        <button class="btn-add-to-cart" *ngIf="product.is_in_inventory">ADD TO CART</button>
     </div>
 </div>
-<div class="overlay"></div>
+<div class="overlay" *ngIf="ispopUpShow"></div>

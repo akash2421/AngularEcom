@@ -1,9 +1,22 @@
-<div class="input-group mb-4 d-flex justify-content-center align-items-center">
+<!-- <div class="input-group mb-4 d-flex justify-content-center align-items-center">
     <input type="text" class="form-control w-50" placeholder="Search the product" #searchInput>
     <div class="input-group-append">
       <button class="btn btn-dark" (click)="updateInputChange()" 
       type="button">Search</button>
     </div>
-  </div>
+  </div> -->
 
-  <p *ngIf="searchtext !='' "><b>Searching for : </b> {{searchtext}}</p>
+  <div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+      <div class="col-md-8">
+        <div class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control"  placeholder="Search the product" #searchInput >
+          <button class="btn btn-primary" (click)="updateInputChange()">Search</button>
+        </div>
+        
+      </div>
+      
+    </div>
+</div>
+<p *ngIf="searchtext !='' "><b>Searching for : </b> {{searchtext}}</p>
